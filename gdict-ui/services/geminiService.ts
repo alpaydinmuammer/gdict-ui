@@ -1,6 +1,6 @@
 import { DictionaryEntry, WordOfTheDay, GrammarAnalysis } from "../types";
 
-const API_BASE_URL = 'http://localhost:3001/api';
+const API_BASE_URL = 'http://localhost:3000/api';
 
 export const lookupWord = async (word: string): Promise<DictionaryEntry> => {
   try {
@@ -58,6 +58,27 @@ export const checkGrammar = async (textToAnalyze: string): Promise<GrammarAnalys
     return await response.json() as GrammarAnalysis;
   } catch (error) {
     console.error("Grammar check failed:", error);
+    throw error;
+  }
+};
+
+// Generic generator for other needs
+export const generateText = async (prompt: string): Promise<any> => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/generate`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ prompt: prompt }),
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("API Call Failed:", error);
     throw error;
   }
 };
