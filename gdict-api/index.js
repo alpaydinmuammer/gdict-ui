@@ -136,6 +136,7 @@ app.post('/api/lookup', async (req, res) => {
                                 phrase: { type: Type.STRING },
                                 meaning_tr: { type: Type.STRING }
                             },
+                            required: ['phrase', 'meaning_tr']
                         },
                         nullable: true
                     },
@@ -151,13 +152,15 @@ app.post('/api/lookup', async (req, res) => {
                                 example_en: { type: Type.STRING },
                                 example_tr: { type: Type.STRING },
                             },
+                            required: ['type', 'definition_tr', 'example_en', 'example_tr']
                         }
                     }
                 },
+                required: ['word', 'pronunciation', 'level', 'frequency_score', 'frequency_label', 'collocations', 'synonyms', 'meanings']
             }
         };
 
-        const text = await generateContent('gemini-2.0-flash-exp', prompt, config); // Updated to latest flash or stick to 1.5
+        const text = await generateContent('gemini-2.0-flash', prompt, config);
         // Note: Using 'gemini-1.5-flash' or similar as 'gemini-2.5-flash' in original code might be a typo or beta? 
         // I will use 'gemini-1.5-flash' as safe default, or 'gemini-2.0-flash-exp' if available. 
         // Let's stick to what was likely intended or standard 'gemini-1.5-flash' for stability unless 2.5 exists.
@@ -165,6 +168,7 @@ app.post('/api/lookup', async (req, res) => {
         // I will use 'gemini-1.5-flash' to be safe.
 
         if (!text) return res.status(500).json({ error: "No response from AI" });
+        console.log("Response text length:", text.length, "First 100 chars:", text.substring(0, 100));
         res.json(JSON.parse(text));
 
     } catch (error) {
