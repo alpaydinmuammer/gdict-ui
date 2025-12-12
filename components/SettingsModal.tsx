@@ -253,9 +253,23 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                     </div>
                     <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Konsept ve Vizyon</span>
                   </div>
-                  <div className="flex flex-wrap gap-2 pl-9">
-                    <span className="px-3 py-1.5 bg-[var(--p-accent)]/10 text-[var(--p-accent)] rounded-full text-xs font-bold">Muammer Alpaydın</span>
-                    <span className="px-3 py-1.5 bg-[var(--p-accent)]/10 text-[var(--p-accent)] rounded-full text-xs font-bold">Gamze Kurt</span>
+                  <div className="flex flex-col gap-2 pl-9">
+                    <div className="group flex items-center gap-2 px-3 py-2 bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-white/5 hover:border-[var(--p-accent)]/30 dark:hover:border-[var(--p-accent)]/30 transition-all duration-200 hover:shadow-sm">
+                      <div className="w-6 h-6 rounded-full bg-[var(--p-accent)]/10 flex items-center justify-center flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5 text-[var(--p-accent)]">
+                          <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
+                        </svg>
+                      </div>
+                      <span className="text-sm font-semibold text-slate-700 dark:text-slate-200 group-hover:text-[var(--p-accent)] transition-colors">Muammer Alpaydın</span>
+                    </div>
+                    <div className="group flex items-center gap-2 px-3 py-2 bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-white/5 hover:border-[var(--p-accent)]/30 dark:hover:border-[var(--p-accent)]/30 transition-all duration-200 hover:shadow-sm">
+                      <div className="w-6 h-6 rounded-full bg-[var(--p-accent)]/10 flex items-center justify-center flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5 text-[var(--p-accent)]">
+                          <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
+                        </svg>
+                      </div>
+                      <span className="text-sm font-semibold text-slate-700 dark:text-slate-200 group-hover:text-[var(--p-accent)] transition-colors">Gamze Kurt</span>
+                    </div>
                   </div>
                 </div>
 
@@ -269,9 +283,23 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                     </div>
                     <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Geliştirme ve Kod</span>
                   </div>
-                  <div className="flex flex-wrap gap-2 pl-9">
-                    <span className="px-3 py-1.5 bg-[var(--p-accent)]/10 text-[var(--p-accent)] rounded-full text-xs font-bold">Muammer Alpaydın</span>
-                    <span className="px-3 py-1.5 bg-[var(--p-accent)]/10 text-[var(--p-accent)] rounded-full text-xs font-bold">Taha Koçer</span>
+                  <div className="flex flex-col gap-2 pl-9">
+                    <div className="group flex items-center gap-2 px-3 py-2 bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-white/5 hover:border-[var(--p-accent)]/30 dark:hover:border-[var(--p-accent)]/30 transition-all duration-200 hover:shadow-sm">
+                      <div className="w-6 h-6 rounded-full bg-[var(--p-accent)]/10 flex items-center justify-center flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5 text-[var(--p-accent)]">
+                          <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
+                        </svg>
+                      </div>
+                      <span className="text-sm font-semibold text-slate-700 dark:text-slate-200 group-hover:text-[var(--p-accent)] transition-colors">Muammer Alpaydın</span>
+                    </div>
+                    <div className="group flex items-center gap-2 px-3 py-2 bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-white/5 hover:border-[var(--p-accent)]/30 dark:hover:border-[var(--p-accent)]/30 transition-all duration-200 hover:shadow-sm">
+                      <div className="w-6 h-6 rounded-full bg-[var(--p-accent)]/10 flex items-center justify-center flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5 text-[var(--p-accent)]">
+                          <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
+                        </svg>
+                      </div>
+                      <span className="text-sm font-semibold text-slate-700 dark:text-slate-200 group-hover:text-[var(--p-accent)] transition-colors">Taha Koçer</span>
+                    </div>
                   </div>
                 </div>
 
