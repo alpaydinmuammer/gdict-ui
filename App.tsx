@@ -478,7 +478,7 @@ function App() {
                         {/* Conditional Content Based on Active Tab */}
                         {activeTab === 'dictionary' ? (
                             <>
-                                <div className={`transition-all duration-500 ease-out ${searchState.status === 'idle' ? 'mt-[8vh] md:mt-[14vh]' : ''}`}>
+                                <div className={`transition-all duration-500 ease-out ${searchState.status === 'idle' ? 'mt-[6vh] md:mt-[10vh]' : ''}`}>
 
                                     {/* 2. Main Search Box */}
                                     <SearchBar onSearch={handleSearch} isLoading={searchState.status === 'loading'} />
